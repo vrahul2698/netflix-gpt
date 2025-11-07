@@ -4,10 +4,15 @@ import { validateForm } from "../utils/validateForm";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "./../utils/firebase";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { BACKGROUND, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [isSigninForm, setIsSigninForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -20,14 +25,13 @@ const Login = () => {
   };
 
   const handleFormSubmit = () => {
-   
     const message = validateForm(
       isSigninForm,
       // fullname.current.value,
       email.current.value,
       password.current.value
-    )
-    console.log(message)
+    );
+    console.log(message);
     setErrorMessage(message);
     if (message) return;
 
@@ -41,7 +45,20 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+          updateProfile(auth.currentUser, {
+            displayName: fullname?.current?.value,
+            photoURL: USER_AVATAR,
+          })
+            .then(() => {
+              // Profile updated!
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(addUser({ uid, email, displayName, photoURL }));
+            })
+            .catch((error) => {
+              // An error occurred
+              const errorMessage = error.message;
+              setErrorMessage(errorMessage);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -60,7 +77,8 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          // ...
+          const { uid, email, displayName, photoURL } = auth.currentUser;
+          dispatch(addUser({ uid, email, displayName, photoURL }));
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -74,7 +92,7 @@ const Login = () => {
       <div className="absolute">
         <Header />
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/9c363af5-4750-4f14-87d1-8125f5276db0/web/IN-en-20251027-TRIFECTA-perspective_b68b1528-3a10-4997-9f99-48ccbdb86626_small.jpg"
+          src={BACKGROUND}
           alt="background"
         />
       </div>
