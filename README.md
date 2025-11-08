@@ -28,6 +28,10 @@
     - Embedded the utube video
     - make it autoplay and mute
     - added tailwind css to make main Container Awesome
+    - Created Secondary Containers
+    - Added Custom hooks for TopRated , Popular , Trending
+    - Find the Image CDN link and movies link
+    - Made Seconday Container UI loooks Cool
 
 
 # Features
