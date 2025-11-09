@@ -1,14 +1,24 @@
-export const LOGO = "https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-08-26/consent/87b6a5c0-0104-4e96-a291-092c11350111/0198e689-25fa-7d64-bb49-0f7e75f898d2/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
+export const LOGO =
+  "https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-08-26/consent/87b6a5c0-0104-4e96-a291-092c11350111/0198e689-25fa-7d64-bb49-0f7e75f898d2/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 
-export const BACKGROUND = "https://assets.nflxext.com/ffe/siteui/vlv3/9c363af5-4750-4f14-87d1-8125f5276db0/web/IN-en-20251027-TRIFECTA-perspective_b68b1528-3a10-4997-9f99-48ccbdb86626_small.jpg";
-export const USER_AVATAR = "https://cdn-icons-png.flaticon.com/512/9203/9203764.png";
+export const BACKGROUND =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/9c363af5-4750-4f14-87d1-8125f5276db0/web/IN-en-20251027-TRIFECTA-perspective_b68b1528-3a10-4997-9f99-48ccbdb86626_small.jpg";
+export const USER_AVATAR =
+  "https://cdn-icons-png.flaticon.com/512/9203/9203764.png";
 
 export const API_OPTIONS = {
-    method: 'GET',
-    headers: {
-        accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjA4ZGI1YjQyMGU5YmZhMjgzNGM1ODBkZjJmOGE1OSIsIm5iZiI6MTc2MjQ5NzI3My42NjgsInN1YiI6IjY5MGQ5MmY5ZjEyNWI4OGI1NjMxYTJiMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Yv_A0Cep1K3vhJOVCkwYNWIbspH-gsqAQzYvmJCYTDI'
-    }
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjA4ZGI1YjQyMGU5YmZhMjgzNGM1ODBkZjJmOGE1OSIsIm5iZiI6MTc2MjQ5NzI3My42NjgsInN1YiI6IjY5MGQ5MmY5ZjEyNWI4OGI1NjMxYTJiMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Yv_A0Cep1K3vhJOVCkwYNWIbspH-gsqAQzYvmJCYTDI",
+  },
 };
 
 export const IMAGE_CDN = "https://image.tmdb.org/t/p/w500/";
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];

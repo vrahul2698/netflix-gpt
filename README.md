@@ -32,6 +32,9 @@
     - Added Custom hooks for TopRated , Popular , Trending
     - Find the Image CDN link and movies link
     - Made Seconday Container UI loooks Cool
+    - usepopularMovies, UseTopRatedMovies
+    - GPT Search Feature
+    
 
 
 # Features

@@ -88,8 +88,8 @@ const Login = () => {
   };
   return (
     <div>
+      <Header />
       <div className="absolute">
-        <Header />
         <img
           src={BACKGROUND}
           alt="background"
