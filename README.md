@@ -34,6 +34,9 @@
     - Made Seconday Container UI loooks Cool
     - usepopularMovies, UseTopRatedMovies
     - GPT Search Feature
+    - GPT Search button and slice
+    - GPT Search Page 
+    - GPT Search Bar, Multi Lanuage Dropdowns with Separate Slice
     
 
 
