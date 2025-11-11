@@ -37,6 +37,15 @@
     - GPT Search button and slice
     - GPT Search Page 
     - GPT Search Bar, Multi Lanuage Dropdowns with Separate Slice
+    - OPenAi APi Key get
+    -GPt Search API Call
+    -Created GPTSLice and added data
+    - Memoization
+    - ReUsed Movies List Component to make Suggestion Container
+    - fetched GPT Movies Suggestion from TMDB
+    - Added .env file
+    - Adding .env file to gitIgnore
+    - Made our Site Responsive
     
 
 

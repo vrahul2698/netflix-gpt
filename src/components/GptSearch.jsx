@@ -5,21 +5,19 @@ import { BACKGROUND } from '../utils/constants'
 
 const GptSearch = () => {
   return (
-    <div>
-
-      {/* 
-      GPT search Bar
-      GPT movie Suggestions 
-      */}
+    <>
       <div className="fixed -z-10">
         <img
+          className="h-screen  md:h-full object-cover"
           src={BACKGROUND}
           alt="background"
         />
       </div>
-      <GptSearchBar />
-      <GptMovieSuggestions />
-    </div>
+      <div className=''>
+        <GptSearchBar />
+        <GptMovieSuggestions />
+      </div>
+    </>
   )
 }
 
